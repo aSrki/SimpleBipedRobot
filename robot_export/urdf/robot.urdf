@@ -1,0 +1,732 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape https://cad.onshape.com/documents/40542507499ebe743aa72484/w/042465d31da425a7a200336b/e/51e42c711a696dad00281e81 -->
+<robot name="C:\Users\Srki\Desktop\Biped\robot_export\urdf">
+  <!-- Link lid -->
+  <link name="lid">
+    <inertial>
+      <origin xyz="-0.0109682 0.0360342 0.0184521" rpy="0 0 0"/>
+      <mass value="0.470865"/>
+      <inertia ixx="0.000676132" ixy="-9.1619e-08" ixz="8.1164e-08" iyy="0.000736067" iyz="0.000100803" izz="0.00079854"/>
+    </inertial>
+    <!-- Part bracket -->
+    <visual>
+      <origin xyz="-0.010973 0.0101737 0.066391" rpy="3.14159 -0 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets\bracket.stl"/>
+      </geometry>
+      <material name="bracket_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.010973 0.0101737 0.066391" rpy="3.14159 -0 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets\bracket.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part lid -->
+    <visual>
+      <origin xyz="-0.010973 0.00667374 0.021391" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\lid.stl"/>
+      </geometry>
+      <material name="lid_material">
+        <color rgba="0.647059 0.647059 0.647059 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.010973 0.00667374 0.021391" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\lid.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part bat -->
+    <visual>
+      <origin xyz="-0.0109609 0.0250002 0.00389104" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets\bat.stl"/>
+      </geometry>
+      <material name="bat_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0109609 0.0250002 0.00389104" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets\bat.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part torso -->
+    <visual>
+      <origin xyz="-0.010973 0.00667374 0.024391" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\torso.stl"/>
+      </geometry>
+      <material name="torso_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.010973 0.00667374 0.024391" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\torso.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part dc04_b01_horn2_dummy -->
+    <visual>
+      <origin xyz="0.011527 0.0101737 0.00539104" rpy="3.14159 -0 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+      <material name="dc04_b01_horn2_dummy_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.011527 0.0101737 0.00539104" rpy="3.14159 -0 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part assy_dummy -->
+    <visual>
+      <origin xyz="0.011527 0.0101737 0.00539104" rpy="3.14159 -0 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+      <material name="assy_dummy_material">
+        <color rgba="0.231373 0.380392 0.705882 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.011527 0.0101737 0.00539104" rpy="3.14159 -0 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part dc04_b01_horn2_dummy_2 -->
+    <visual>
+      <origin xyz="-0.033473 0.0101737 0.00539104" rpy="3.14159 -0 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+      <material name="dc04_b01_horn2_dummy_2_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.033473 0.0101737 0.00539104" rpy="3.14159 -0 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part assy_dummy_2 -->
+    <visual>
+      <origin xyz="-0.033473 0.0101737 0.00539104" rpy="3.14159 -0 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+      <material name="assy_dummy_2_material">
+        <color rgba="0.231373 0.380392 0.705882 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.033473 0.0101737 0.00539104" rpy="3.14159 -0 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Frame imu (dummy link + fixed joint) -->
+  <link name="imu">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="imu_frame" type="fixed">
+    <origin xyz="-0.010973 0.0102038 0.066391" rpy="0 -0 3.14159"/>
+    <parent link="lid"/>
+    <child link="imu"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Link pelvis -->
+  <link name="pelvis">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part pelvis -->
+    <visual>
+      <origin xyz="0.00101569 0 -0.004" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\pelvis.stl"/>
+      </geometry>
+      <material name="pelvis_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00101569 0 -0.004" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\pelvis.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part dc04_b01_horn2_dummy_3 -->
+    <visual>
+      <origin xyz="0.00101569 -0.0001 -0.0156" rpy="1.5708 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+      <material name="dc04_b01_horn2_dummy_3_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00101569 -0.0001 -0.0156" rpy="1.5708 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part assy_dummy_3 -->
+    <visual>
+      <origin xyz="0.00101569 -0.0001 -0.0156" rpy="1.5708 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+      <material name="assy_dummy_3_material">
+        <color rgba="0.231373 0.380392 0.705882 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00101569 -0.0001 -0.0156" rpy="1.5708 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link hipleft -->
+  <link name="hipleft">
+    <inertial>
+      <origin xyz="0.0372221 -0.00346123 0.0201056" rpy="0 0 0"/>
+      <mass value="0.0204836"/>
+      <inertia ixx="8.4261e-06" ixy="1.26118e-06" ixz="8.0548e-08" iyy="1.35995e-05" iyz="-7.49e-09" izz="1.2544e-05"/>
+    </inertial>
+    <!-- Part hipleft -->
+    <visual>
+      <origin xyz="0.041 0.011 0.02" rpy="1.5708 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\hipleft.stl"/>
+      </geometry>
+      <material name="hipleft_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.041 0.011 0.02" rpy="1.5708 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\hipleft.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link ax12 -->
+  <link name="ax12">
+    <inertial>
+      <origin xyz="0.0087593 -0.0458407 -0.0384873" rpy="0 0 0"/>
+      <mass value="0.00432563"/>
+      <inertia ixx="6.53314e-07" ixy="3.31886e-07" ixz="-2.91e-10" iyy="6.53314e-07" iyz="-2.91e-10" izz="1.30021e-06"/>
+    </inertial>
+    <!-- Part thigh -->
+    <visual>
+      <origin xyz="0 -0.0386 -0.04" rpy="-0 -0 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets\thigh.stl"/>
+      </geometry>
+      <material name="thigh_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0386 -0.04" rpy="-0 -0 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets\thigh.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part dc04_b01_horn2_dummy_4 -->
+    <visual>
+      <origin xyz="0.0546 -0.0546 -0.021" rpy="3.14159 0 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+      <material name="dc04_b01_horn2_dummy_4_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0546 -0.0546 -0.021" rpy="3.14159 0 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part assy_dummy_4 -->
+    <visual>
+      <origin xyz="0.0546 -0.0546 -0.021" rpy="3.14159 0 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+      <material name="assy_dummy_4_material">
+        <color rgba="0.231373 0.380392 0.705882 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0546 -0.0546 -0.021" rpy="3.14159 0 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part dc04_b01_horn2_dummy_5 -->
+    <visual>
+      <origin xyz="0 -0 -0.021" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+      <material name="dc04_b01_horn2_dummy_5_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0.021" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part assy_dummy_5 -->
+    <visual>
+      <origin xyz="0 -0 -0.021" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+      <material name="assy_dummy_5_material">
+        <color rgba="0.231373 0.380392 0.705882 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 -0.021" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link shin -->
+  <link name="shin">
+    <inertial>
+      <origin xyz="-0 -0.0128584 -0.00148604" rpy="0 0 0"/>
+      <mass value="0.00393566"/>
+      <inertia ixx="5.51651e-07" ixy="0" ixz="0" iyy="3.17984e-07" iyz="1.64e-10" izz="8.63801e-07"/>
+    </inertial>
+    <!-- Part shin -->
+    <visual>
+      <origin xyz="-0 -0.014 -0.003" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\shin.stl"/>
+      </geometry>
+      <material name="shin_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.014 -0.003" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\shin.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part dc04_b01_horn2_dummy_6 -->
+    <visual>
+      <origin xyz="0 -0.0582 0.016" rpy="3.14159 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+      <material name="dc04_b01_horn2_dummy_6_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0582 0.016" rpy="3.14159 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part assy_dummy_6 -->
+    <visual>
+      <origin xyz="0 -0.0582 0.016" rpy="3.14159 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+      <material name="assy_dummy_6_material">
+        <color rgba="0.231373 0.380392 0.705882 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0582 0.016" rpy="3.14159 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link leftfoot -->
+  <link name="leftfoot">
+    <inertial>
+      <origin xyz="-0 -0.0173835 0.0199187" rpy="0 0 0"/>
+      <mass value="0.0324563"/>
+      <inertia ixx="9.94807e-06" ixy="-0" ixz="-6.4e-11" iyy="2.77702e-05" iyz="4.5863e-08" izz="2.17989e-05"/>
+    </inertial>
+    <!-- Part leftfoot -->
+    <visual>
+      <origin xyz="-0 -0.024 0.02" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets\leftfoot.stl"/>
+      </geometry>
+      <material name="leftfoot_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.024 0.02" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets\leftfoot.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from shin to leftfoot -->
+  <joint name="left_ankle" type="revolute">
+    <origin xyz="0 -0.0582 0.035" rpy="-3.14159 -0 -3.14159"/>
+    <parent link="shin"/>
+    <child link="leftfoot"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <!-- Joint from ax12 to shin -->
+  <joint name="left_knee" type="revolute">
+    <origin xyz="0.0546 -0.0546 -0.042" rpy="-0 -0 0.785398"/>
+    <parent link="ax12"/>
+    <child link="shin"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <!-- Joint from hipleft to ax12 -->
+  <joint name="left_hip_pitch" type="revolute">
+    <origin xyz="0.068 0.012 0.02" rpy="-1.5708 0.785398 0"/>
+    <parent link="hipleft"/>
+    <child link="ax12"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <!-- Joint from pelvis to hipleft -->
+  <joint name="left_hip_roll" type="revolute">
+    <origin xyz="0.00101569 -0.0211 -0.0156" rpy="-1.5708 1.5708 0"/>
+    <parent link="pelvis"/>
+    <child link="hipleft"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <!-- Joint from lid to pelvis -->
+  <joint name="left_hip_yaw" type="revolute">
+    <origin xyz="0.011527 0.0101737 -0.015609" rpy="0 -0 0"/>
+    <parent link="lid"/>
+    <child link="pelvis"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <!-- Link pelvis_2 -->
+  <link name="pelvis_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part pelvis_2 -->
+    <visual>
+      <origin xyz="0.00101569 0 -0.004" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\pelvis.stl"/>
+      </geometry>
+      <material name="pelvis_2_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00101569 0 -0.004" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\pelvis.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part dc04_b01_horn2_dummy_7 -->
+    <visual>
+      <origin xyz="0.00101569 0.0001 -0.0156" rpy="1.5708 -0 -3.14159"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+      <material name="dc04_b01_horn2_dummy_7_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00101569 0.0001 -0.0156" rpy="1.5708 -0 -3.14159"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part assy_dummy_7 -->
+    <visual>
+      <origin xyz="0.00101569 0.0001 -0.0156" rpy="1.5708 -0 -3.14159"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+      <material name="assy_dummy_7_material">
+        <color rgba="0.231373 0.380392 0.705882 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00101569 0.0001 -0.0156" rpy="1.5708 -0 -3.14159"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link hipright -->
+  <link name="hipright">
+    <inertial>
+      <origin xyz="0.0372221 0.00346123 0.0201056" rpy="0 0 0"/>
+      <mass value="0.0204836"/>
+      <inertia ixx="8.4261e-06" ixy="-1.26118e-06" ixz="8.0548e-08" iyy="1.35995e-05" iyz="7.49e-09" izz="1.2544e-05"/>
+    </inertial>
+    <!-- Part hipright -->
+    <visual>
+      <origin xyz="0.041 0.011 0.02" rpy="1.5708 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\hipright.stl"/>
+      </geometry>
+      <material name="hipright_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.041 0.011 0.02" rpy="1.5708 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\hipright.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link ax12_2 -->
+  <link name="ax12_2">
+    <inertial>
+      <origin xyz="-0.0087593 -0.0458407 -0.0384873" rpy="0 0 0"/>
+      <mass value="0.00432563"/>
+      <inertia ixx="6.53314e-07" ixy="-3.31886e-07" ixz="2.91e-10" iyy="6.53314e-07" iyz="-2.91e-10" izz="1.30021e-06"/>
+    </inertial>
+    <!-- Part thigh_2 -->
+    <visual>
+      <origin xyz="-0.016 -0.0546 -0.04" rpy="-0 0 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets\thigh.stl"/>
+      </geometry>
+      <material name="thigh_2_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.016 -0.0546 -0.04" rpy="-0 0 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets\thigh.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part dc04_b01_horn2_dummy_8 -->
+    <visual>
+      <origin xyz="-0.0546 -0.0546 -0.021" rpy="3.14159 0 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+      <material name="dc04_b01_horn2_dummy_8_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0546 -0.0546 -0.021" rpy="3.14159 0 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part assy_dummy_8 -->
+    <visual>
+      <origin xyz="-0.0546 -0.0546 -0.021" rpy="3.14159 0 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+      <material name="assy_dummy_8_material">
+        <color rgba="0.231373 0.380392 0.705882 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0546 -0.0546 -0.021" rpy="3.14159 0 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part dc04_b01_horn2_dummy_9 -->
+    <visual>
+      <origin xyz="0 0 -0.021" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+      <material name="dc04_b01_horn2_dummy_9_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.021" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part assy_dummy_9 -->
+    <visual>
+      <origin xyz="0 0 -0.021" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+      <material name="assy_dummy_9_material">
+        <color rgba="0.231373 0.380392 0.705882 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.021" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link shin_2 -->
+  <link name="shin_2">
+    <inertial>
+      <origin xyz="-0 -0.0128584 -0.00148604" rpy="0 0 0"/>
+      <mass value="0.00393566"/>
+      <inertia ixx="5.51651e-07" ixy="0" ixz="0" iyy="3.17984e-07" iyz="1.64e-10" izz="8.63801e-07"/>
+    </inertial>
+    <!-- Part shin_2 -->
+    <visual>
+      <origin xyz="-0 -0.014 -0.003" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\shin.stl"/>
+      </geometry>
+      <material name="shin_2_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.014 -0.003" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets\shin.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part dc04_b01_horn2_dummy_10 -->
+    <visual>
+      <origin xyz="-0 -0.0582 0.016" rpy="3.14159 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+      <material name="dc04_b01_horn2_dummy_10_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0582 0.016" rpy="3.14159 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets\dc04_b01_horn2_dummy.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part assy_dummy_10 -->
+    <visual>
+      <origin xyz="-0 -0.0582 0.016" rpy="3.14159 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+      <material name="assy_dummy_10_material">
+        <color rgba="0.231373 0.380392 0.705882 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.0582 0.016" rpy="3.14159 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets\assy_dummy.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link leftfoot_2 -->
+  <link name="leftfoot_2">
+    <inertial>
+      <origin xyz="-0 -0.0173835 0.0199187" rpy="0 0 0"/>
+      <mass value="0.0324563"/>
+      <inertia ixx="9.94807e-06" ixy="0" ixz="-6.4e-11" iyy="2.77702e-05" iyz="4.5863e-08" izz="2.17989e-05"/>
+    </inertial>
+    <!-- Part leftfoot_2 -->
+    <visual>
+      <origin xyz="-0 -0.024 0.02" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets\leftfoot.stl"/>
+      </geometry>
+      <material name="leftfoot_2_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0.024 0.02" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets\leftfoot.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from shin_2 to leftfoot_2 -->
+  <joint name="right_ankle" type="revolute">
+    <origin xyz="-0 -0.0582 0.035" rpy="3.14159 0 -3.14159"/>
+    <parent link="shin_2"/>
+    <child link="leftfoot_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <!-- Joint from ax12_2 to shin_2 -->
+  <joint name="right_knee" type="revolute">
+    <origin xyz="-0.0546 -0.0546 -0.042" rpy="0 0 -0.785398"/>
+    <parent link="ax12_2"/>
+    <child link="shin_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <!-- Joint from hipright to ax12_2 -->
+  <joint name="right_hip_pitch" type="revolute">
+    <origin xyz="0.068 -0.012 0.02" rpy="-1.5708 -0.785398 3.14159"/>
+    <parent link="hipright"/>
+    <child link="ax12_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <!-- Joint from pelvis_2 to hipright -->
+  <joint name="right_hip_roll" type="revolute">
+    <origin xyz="0.00101569 0.0211 -0.0156" rpy="1.5708 1.5708 0"/>
+    <parent link="pelvis_2"/>
+    <child link="hipright"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <!-- Joint from lid to pelvis_2 -->
+  <joint name="right_hip_yaw" type="revolute">
+    <origin xyz="-0.033473 0.0101737 -0.015609" rpy="0 -0 3.14159"/>
+    <parent link="lid"/>
+    <child link="pelvis_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+</robot>

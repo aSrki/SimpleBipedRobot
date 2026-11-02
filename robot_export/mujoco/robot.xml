@@ -1,0 +1,250 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape https://cad.onshape.com/documents/40542507499ebe743aa72484/w/042465d31da425a7a200336b/e/51e42c711a696dad00281e81 -->
+<!-- Edited: free-floating base, floor, standing start pose, ABS mass for previously massless parts -->
+<mujoco model="C:\Users\Srki\Desktop\Biped\robot_export\mujoco">
+  <compiler angle="degree" meshdir="assets" autolimits="true" />
+    <visual>
+    <scale framewidth="0.015" framelength="0.8"/>
+  </visual>
+  <default>
+    <default class="C:\Users\Srki\Desktop\Biped\robot_export\mujoco">
+      <joint frictionloss="0.1" armature="0.005" />
+      <position kp="50" dampratio="1" />
+      <default class="visual">
+        <geom type="mesh" contype="0" conaffinity="0" group="2" />
+      </default>
+      <default class="collision">
+        <geom group="3" />
+      </default>
+    </default>
+  </default>
+  <worldbody>
+
+    <!-- Link lid -->
+    <body name="lid" pos="0 0 0.2588" quat="1 0 0 0" childclass="C:\Users\Srki\Desktop\Biped\robot_export\mujoco">
+      <freejoint name="root"/>
+      <!-- inertial recomputed: massless parts given ABS (1040 kg/m3): dc04_b01_horn2_dummy 1.2g, assy_dummy 42.4g, dc04_b01_horn2_dummy 1.2g, assy_dummy 42.4g -->
+      <inertial pos="-0.0109638 0.02999 0.0162456" mass="0.558054" fullinertia="0.000826028 0.000808758 0.00097399 1.11586e-08 1.11854e-07 6.08002e-05" />
+      <!-- Part bracket -->
+      <geom type="mesh" class="visual" pos="-0.010973 0.0101737 0.066391" quat="0 0 1 0" mesh="bracket" material="bracket_material" />
+      <geom type="mesh" class="collision" pos="-0.010973 0.0101737 0.066391" quat="0 0 1 0" mesh="bracket" material="bracket_material" />
+      <!-- Part lid -->
+      <geom type="mesh" class="visual" pos="-0.010973 0.00667374 0.021391" quat="1 0 0 0" mesh="lid" material="lid_material" />
+      <geom type="mesh" class="collision" pos="-0.010973 0.00667374 0.021391" quat="1 0 0 0" mesh="lid" material="lid_material" />
+      <!-- Part bat -->
+      <geom type="mesh" class="visual" pos="-0.0109609 0.0250002 0.00389104" quat="0.5 -0.5 -0.5 -0.5" mesh="bat" material="bat_material" />
+      <geom type="mesh" class="collision" pos="-0.0109609 0.0250002 0.00389104" quat="0.5 -0.5 -0.5 -0.5" mesh="bat" material="bat_material" />
+      <!-- Part torso -->
+      <geom type="mesh" class="visual" pos="-0.010973 0.00667374 0.024391" quat="1 0 0 0" mesh="torso" material="torso_material" />
+      <geom type="mesh" class="collision" pos="-0.010973 0.00667374 0.024391" quat="1 0 0 0" mesh="torso" material="torso_material" />
+      <!-- Part dc04_b01_horn2_dummy -->
+      <geom type="mesh" class="visual" pos="0.011527 0.0101737 0.00539104" quat="0 0 1 0" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+      <geom type="mesh" class="collision" pos="0.011527 0.0101737 0.00539104" quat="0 0 1 0" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+      <!-- Part assy_dummy -->
+      <geom type="mesh" class="visual" pos="0.011527 0.0101737 0.00539104" quat="0 0 1 0" mesh="assy_dummy" material="assy_dummy_material" />
+      <geom type="mesh" class="collision" pos="0.011527 0.0101737 0.00539104" quat="0 0 1 0" mesh="assy_dummy" material="assy_dummy_material" />
+      <!-- Part dc04_b01_horn2_dummy_2 -->
+      <geom type="mesh" class="visual" pos="-0.033473 0.0101737 0.00539104" quat="0 0 1 0" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+      <geom type="mesh" class="collision" pos="-0.033473 0.0101737 0.00539104" quat="0 0 1 0" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+      <!-- Part assy_dummy_2 -->
+      <geom type="mesh" class="visual" pos="-0.033473 0.0101737 0.00539104" quat="0 0 1 0" mesh="assy_dummy" material="assy_dummy_material" />
+      <geom type="mesh" class="collision" pos="-0.033473 0.0101737 0.00539104" quat="0 0 1 0" mesh="assy_dummy" material="assy_dummy_material" />
+      <!-- Frame imu -->
+      <site group="3" name="imu" pos="-0.010973 0.0102038 0.066391" euler="0 0 -90" />
+      <!-- Link pelvis -->
+      <body name="pelvis" pos="0.011527 0.0101737 -0.015609" quat="1 0 0 0">
+        <!-- Joint from lid to pelvis -->
+        <joint axis="0 0 -1" name="left_hip_yaw" type="hinge" />
+        <!-- inertial recomputed: massless parts given ABS (1040 kg/m3): pelvis 10.4g, dc04_b01_horn2_dummy 1.2g, assy_dummy 42.4g -->
+        <inertial pos="-0.00049438 -0.000936805 -0.0250517" mass="0.0540424" fullinertia="1.84772e-05 1.64017e-05 1.03422e-05 7.40386e-08 3.34401e-07 -7.61658e-08" />
+        <!-- Part pelvis -->
+        <geom type="mesh" class="visual" pos="0.00101569 0 -0.004" quat="1 0 0 0" mesh="pelvis" material="pelvis_material" />
+        <geom type="mesh" class="collision" pos="0.00101569 0 -0.004" quat="1 0 0 0" mesh="pelvis" material="pelvis_material" />
+        <!-- Part dc04_b01_horn2_dummy_3 -->
+        <geom type="mesh" class="visual" pos="0.00101569 -0.0001 -0.0156" quat="0.707107 0.707107 -0 0" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+        <geom type="mesh" class="collision" pos="0.00101569 -0.0001 -0.0156" quat="0.707107 0.707107 -0 0" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+        <!-- Part assy_dummy_3 -->
+        <geom type="mesh" class="visual" pos="0.00101569 -0.0001 -0.0156" quat="0.707107 0.707107 -0 0" mesh="assy_dummy" material="assy_dummy_material" />
+        <geom type="mesh" class="collision" pos="0.00101569 -0.0001 -0.0156" quat="0.707107 0.707107 -0 0" mesh="assy_dummy" material="assy_dummy_material" />
+        <!-- Link hipleft -->
+        <body name="hipleft" pos="0.00101569 -0.0211 -0.0156" quat="0.5 -0.5 0.5 0.5">
+          <!-- Joint from pelvis to hipleft -->
+          <joint axis="0 0 -1" name="left_hip_roll" type="hinge" />
+          <inertial pos="0.0372221 -0.00346123 0.0201056" mass="0.0204836" fullinertia="8.4261e-06 1.35995e-05 1.2544e-05 1.26118e-06 8.0548e-08 -7.49e-09" />
+          <!-- Part hipleft -->
+          <geom type="mesh" class="visual" pos="0.041 0.011 0.02" quat="0.707107 0.707107 -0 -0" mesh="hipleft" material="hipleft_material" />
+          <geom type="mesh" class="collision" pos="0.041 0.011 0.02" quat="0.707107 0.707107 -0 -0" mesh="hipleft" material="hipleft_material" />
+          <!-- Link ax12 -->
+          <body name="ax12" pos="0.068 0.012 0.02" quat="0.653281 -0.653281 0.270598 0.270598">
+            <!-- Joint from hipleft to ax12 -->
+            <joint axis="0 0 1" name="left_hip_pitch" type="hinge" />
+            <!-- inertial recomputed: massless parts given ABS (1040 kg/m3): dc04_b01_horn2_dummy 1.2g, assy_dummy 42.4g, dc04_b01_horn2_dummy 1.2g, assy_dummy 42.4g -->
+            <inertial pos="0.0202985 -0.0343015 -0.0218266" mass="0.0915148" fullinertia="6.0218e-05 6.0218e-05 9.99196e-05 3.78038e-05 1.15656e-06 -2.90288e-06" />
+            <!-- Part thigh -->
+            <geom type="mesh" class="visual" pos="0 -0.0386 -0.04" quat="0 0 0 -1" mesh="thigh" material="thigh_material" />
+            <geom type="mesh" class="collision" pos="0 -0.0386 -0.04" quat="0 0 0 -1" mesh="thigh" material="thigh_material" />
+            <!-- Part dc04_b01_horn2_dummy_4 -->
+            <geom type="mesh" class="visual" pos="0.0546 -0.0546 -0.021" quat="0 0.707107 0.707107 -0" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+            <geom type="mesh" class="collision" pos="0.0546 -0.0546 -0.021" quat="0 0.707107 0.707107 -0" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+            <!-- Part assy_dummy_4 -->
+            <geom type="mesh" class="visual" pos="0.0546 -0.0546 -0.021" quat="0 0.707107 0.707107 -0" mesh="assy_dummy" material="assy_dummy_material" />
+            <geom type="mesh" class="collision" pos="0.0546 -0.0546 -0.021" quat="0 0.707107 0.707107 -0" mesh="assy_dummy" material="assy_dummy_material" />
+            <!-- Part dc04_b01_horn2_dummy_5 -->
+            <geom type="mesh" class="visual" pos="0 -0 -0.021" quat="1 -0 -0 0" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+            <geom type="mesh" class="collision" pos="0 -0 -0.021" quat="1 -0 -0 0" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+            <!-- Part assy_dummy_5 -->
+            <geom type="mesh" class="visual" pos="0 -0 -0.021" quat="1 -0 -0 0" mesh="assy_dummy" material="assy_dummy_material" />
+            <geom type="mesh" class="collision" pos="0 -0 -0.021" quat="1 -0 -0 0" mesh="assy_dummy" material="assy_dummy_material" />
+            <!-- Link shin -->
+            <body name="shin" pos="0.0546 -0.0546 -0.042" quat="0.92388 -0 -0 0.382683">
+              <!-- Joint from ax12 to shin -->
+              <joint axis="0 0 1" name="left_knee" type="hinge" />
+              <!-- inertial recomputed: massless parts given ABS (1040 kg/m3): dc04_b01_horn2_dummy 1.2g, assy_dummy 42.4g -->
+              <inertial pos="-3.01791e-05 -0.0426824 0.0135787" mass="0.0475303" fullinertia="1.79048e-05 8.2316e-06 1.52864e-05 7.53548e-09 1.20461e-09 1.83343e-06" />
+              <!-- Part shin -->
+              <geom type="mesh" class="visual" pos="-0 -0.014 -0.003" quat="1 0 -0 -0" mesh="shin" material="shin_material" />
+              <geom type="mesh" class="collision" pos="-0 -0.014 -0.003" quat="1 0 -0 -0" mesh="shin" material="shin_material" />
+              <!-- Part dc04_b01_horn2_dummy_6 -->
+              <geom type="mesh" class="visual" pos="0 -0.0582 0.016" quat="0 1 -0 0" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+              <geom type="mesh" class="collision" pos="0 -0.0582 0.016" quat="0 1 -0 0" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+              <!-- Part assy_dummy_6 -->
+              <geom type="mesh" class="visual" pos="0 -0.0582 0.016" quat="0 1 -0 0" mesh="assy_dummy" material="assy_dummy_material" />
+              <geom type="mesh" class="collision" pos="0 -0.0582 0.016" quat="0 1 -0 0" mesh="assy_dummy" material="assy_dummy_material" />
+              <!-- Link leftfoot -->
+              <body name="leftfoot" pos="0 -0.0582 0.035" quat="0 0 -1 0">
+                <!-- Joint from shin to leftfoot -->
+                <joint axis="0 0 -1" name="left_ankle" type="hinge" />
+                <inertial pos="-0 -0.0173835 0.0199187" mass="0.0324563" fullinertia="9.94807e-06 2.77702e-05 2.17989e-05 -0 -6.4e-11 4.5863e-08" />
+                <!-- Part leftfoot -->
+                <geom type="mesh" class="visual" pos="-0 -0.024 0.02" quat="0.5 -0.5 -0.5 -0.5" mesh="leftfoot" material="leftfoot_material" />
+                <geom type="mesh" class="collision" pos="-0 -0.024 0.02" quat="0.5 -0.5 -0.5 -0.5" mesh="leftfoot" material="leftfoot_material" />
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <!-- Link pelvis_2 -->
+      <body name="pelvis_2" pos="-0.033473 0.0101737 -0.015609" quat="0 0 0 1">
+        <!-- Joint from lid to pelvis_2 -->
+        <joint axis="0 0 -1" name="right_hip_yaw" type="hinge" />
+        <!-- inertial recomputed: massless parts given ABS (1040 kg/m3): pelvis 10.4g, dc04_b01_horn2_dummy 1.2g, assy_dummy 42.4g -->
+        <inertial pos="-0.000441295 0.000936805 -0.0250517" mass="0.0540424" fullinertia="1.84772e-05 1.64102e-05 1.03507e-05 -7.61752e-08 3.66874e-07 7.61658e-08" />
+        <!-- Part pelvis_2 -->
+        <geom type="mesh" class="visual" pos="0.00101569 0 -0.004" quat="1 0 0 0" mesh="pelvis" material="pelvis_material" />
+        <geom type="mesh" class="collision" pos="0.00101569 0 -0.004" quat="1 0 0 0" mesh="pelvis" material="pelvis_material" />
+        <!-- Part dc04_b01_horn2_dummy_7 -->
+        <geom type="mesh" class="visual" pos="0.00101569 0.0001 -0.0156" quat="0 0 -0.707107 -0.707107" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+        <geom type="mesh" class="collision" pos="0.00101569 0.0001 -0.0156" quat="0 0 -0.707107 -0.707107" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+        <!-- Part assy_dummy_7 -->
+        <geom type="mesh" class="visual" pos="0.00101569 0.0001 -0.0156" quat="0 0 -0.707107 -0.707107" mesh="assy_dummy" material="assy_dummy_material" />
+        <geom type="mesh" class="collision" pos="0.00101569 0.0001 -0.0156" quat="0 0 -0.707107 -0.707107" mesh="assy_dummy" material="assy_dummy_material" />
+        <!-- Link hipright -->
+        <body name="hipright" pos="0.00101569 0.0211 -0.0156" quat="0.5 0.5 0.5 -0.5">
+          <!-- Joint from pelvis_2 to hipright -->
+          <joint axis="0 0 -1" name="right_hip_roll" type="hinge" />
+          <inertial pos="0.0372221 0.00346123 0.0201056" mass="0.0204836" fullinertia="8.4261e-06 1.35995e-05 1.2544e-05 -1.26118e-06 8.0548e-08 7.49e-09" />
+          <!-- Part hipright -->
+          <geom type="mesh" class="visual" pos="0.041 0.011 0.02" quat="0.707107 0.707107 -0 -0" mesh="hipright" material="hipright_material" />
+          <geom type="mesh" class="collision" pos="0.041 0.011 0.02" quat="0.707107 0.707107 -0 -0" mesh="hipright" material="hipright_material" />
+          <!-- Link ax12_2 -->
+          <body name="ax12_2" pos="0.068 -0.012 0.02" quat="0.270598 0.270598 -0.653281 0.653281">
+            <!-- Joint from hipright to ax12_2 -->
+            <joint axis="0 0 1" name="right_hip_pitch" type="hinge" />
+            <!-- inertial recomputed: massless parts given ABS (1040 kg/m3): dc04_b01_horn2_dummy 1.2g, assy_dummy 42.4g, dc04_b01_horn2_dummy 1.2g, assy_dummy 42.4g -->
+            <inertial pos="-0.0203298 -0.0342702 -0.0218266" mass="0.0915148" fullinertia="6.01015e-05 6.01015e-05 9.96865e-05 -3.77263e-05 -1.14966e-06 -2.90071e-06" />
+            <!-- Part thigh_2 -->
+            <geom type="mesh" class="visual" pos="-0.016 -0.0546 -0.04" quat="0.707107 -0 -0 -0.707107" mesh="thigh" material="thigh_material" />
+            <geom type="mesh" class="collision" pos="-0.016 -0.0546 -0.04" quat="0.707107 -0 -0 -0.707107" mesh="thigh" material="thigh_material" />
+            <!-- Part dc04_b01_horn2_dummy_8 -->
+            <geom type="mesh" class="visual" pos="-0.0546 -0.0546 -0.021" quat="0 -0.707107 0.707107 0" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+            <geom type="mesh" class="collision" pos="-0.0546 -0.0546 -0.021" quat="0 -0.707107 0.707107 0" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+            <!-- Part assy_dummy_8 -->
+            <geom type="mesh" class="visual" pos="-0.0546 -0.0546 -0.021" quat="0 -0.707107 0.707107 0" mesh="assy_dummy" material="assy_dummy_material" />
+            <geom type="mesh" class="collision" pos="-0.0546 -0.0546 -0.021" quat="0 -0.707107 0.707107 0" mesh="assy_dummy" material="assy_dummy_material" />
+            <!-- Part dc04_b01_horn2_dummy_9 -->
+            <geom type="mesh" class="visual" pos="0 0 -0.021" quat="1 -0 -0 0" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+            <geom type="mesh" class="collision" pos="0 0 -0.021" quat="1 -0 -0 0" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+            <!-- Part assy_dummy_9 -->
+            <geom type="mesh" class="visual" pos="0 0 -0.021" quat="1 -0 -0 0" mesh="assy_dummy" material="assy_dummy_material" />
+            <geom type="mesh" class="collision" pos="0 0 -0.021" quat="1 -0 -0 0" mesh="assy_dummy" material="assy_dummy_material" />
+            <!-- Link shin_2 -->
+            <body name="shin_2" pos="-0.0546 -0.0546 -0.042" quat="0.92388 0 -0 -0.382683">
+              <!-- Joint from ax12_2 to shin_2 -->
+              <joint axis="0 0 1" name="right_knee" type="hinge" />
+              <!-- inertial recomputed: massless parts given ABS (1040 kg/m3): dc04_b01_horn2_dummy 1.2g, assy_dummy 42.4g -->
+              <inertial pos="-3.01791e-05 -0.0426824 0.0135787" mass="0.0475303" fullinertia="1.79048e-05 8.2316e-06 1.52864e-05 7.53548e-09 1.20461e-09 1.83343e-06" />
+              <!-- Part shin_2 -->
+              <geom type="mesh" class="visual" pos="-0 -0.014 -0.003" quat="1 0 0 0" mesh="shin" material="shin_material" />
+              <geom type="mesh" class="collision" pos="-0 -0.014 -0.003" quat="1 0 0 0" mesh="shin" material="shin_material" />
+              <!-- Part dc04_b01_horn2_dummy_10 -->
+              <geom type="mesh" class="visual" pos="-0 -0.0582 0.016" quat="0 1 0 0" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+              <geom type="mesh" class="collision" pos="-0 -0.0582 0.016" quat="0 1 0 0" mesh="dc04_b01_horn2_dummy" material="dc04_b01_horn2_dummy_material" />
+              <!-- Part assy_dummy_10 -->
+              <geom type="mesh" class="visual" pos="-0 -0.0582 0.016" quat="0 1 0 0" mesh="assy_dummy" material="assy_dummy_material" />
+              <geom type="mesh" class="collision" pos="-0 -0.0582 0.016" quat="0 1 0 0" mesh="assy_dummy" material="assy_dummy_material" />
+              <!-- Link leftfoot_2 -->
+              <body name="leftfoot_2" pos="-0 -0.0582 0.035" quat="0 0 -1 0">
+                <!-- Joint from shin_2 to leftfoot_2 -->
+                <joint axis="0 0 -1" name="right_ankle" type="hinge" />
+                <inertial pos="-0 -0.0173835 0.0199187" mass="0.0324563" fullinertia="9.94807e-06 2.77702e-05 2.17989e-05 0 -6.4e-11 4.5863e-08" />
+                <!-- Part leftfoot_2 -->
+                <geom type="mesh" class="visual" pos="-0 -0.024 0.02" quat="0.5 -0.5 -0.5 -0.5" mesh="leftfoot" material="leftfoot_material" />
+                <geom type="mesh" class="collision" pos="-0 -0.024 0.02" quat="0.5 -0.5 -0.5 -0.5" mesh="leftfoot" material="leftfoot_material" />
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072"/>
+    <mesh file="shin.stl" />
+    <mesh file="bracket.stl" />
+    <mesh file="torso.stl" />
+    <mesh file="lid.stl" />
+    <mesh file="hipleft.stl" />
+    <mesh file="hipright.stl" />
+    <mesh file="leftfoot.stl" />
+    <mesh file="dc04_b01_horn2_dummy.stl" />
+    <mesh file="bat.stl" />
+    <mesh file="thigh.stl" />
+    <mesh file="pelvis.stl" />
+    <mesh file="assy_dummy.stl" />
+    <material name="bracket_material" rgba="0.615686 0.811765 0.929412 1" />
+    <material name="lid_material" rgba="0.647059 0.647059 0.647059 1" />
+    <material name="bat_material" rgba="0.615686 0.811765 0.929412 1" />
+    <material name="torso_material" rgba="0.615686 0.811765 0.929412 1" />
+    <material name="dc04_b01_horn2_dummy_material" rgba="0.917647 0.917647 0.917647 1" />
+    <material name="assy_dummy_material" rgba="0.231373 0.380392 0.705882 1" />
+    <material name="pelvis_material" rgba="0.615686 0.811765 0.929412 1" />
+    <material name="hipleft_material" rgba="0.615686 0.811765 0.929412 1" />
+    <material name="thigh_material" rgba="0.615686 0.811765 0.929412 1" />
+    <material name="shin_material" rgba="0.615686 0.811765 0.929412 1" />
+    <material name="leftfoot_material" rgba="0.615686 0.811765 0.929412 1" />
+    <material name="hipright_material" rgba="0.615686 0.811765 0.929412 1" />
+  </asset>
+  <actuator>
+    <position class="C:\Users\Srki\Desktop\Biped\robot_export\mujoco" name="left_hip_yaw" joint="left_hip_yaw" />
+    <position class="C:\Users\Srki\Desktop\Biped\robot_export\mujoco" name="left_hip_roll" joint="left_hip_roll" />
+    <position class="C:\Users\Srki\Desktop\Biped\robot_export\mujoco" name="left_hip_pitch" joint="left_hip_pitch" />
+    <position class="C:\Users\Srki\Desktop\Biped\robot_export\mujoco" name="left_knee" joint="left_knee" />
+    <position class="C:\Users\Srki\Desktop\Biped\robot_export\mujoco" name="left_ankle" joint="left_ankle" />
+    <position class="C:\Users\Srki\Desktop\Biped\robot_export\mujoco" name="right_hip_yaw" joint="right_hip_yaw" />
+    <position class="C:\Users\Srki\Desktop\Biped\robot_export\mujoco" name="right_hip_roll" joint="right_hip_roll" />
+    <position class="C:\Users\Srki\Desktop\Biped\robot_export\mujoco" name="right_hip_pitch" joint="right_hip_pitch" />
+    <position class="C:\Users\Srki\Desktop\Biped\robot_export\mujoco" name="right_knee" joint="right_knee" />
+    <position class="C:\Users\Srki\Desktop\Biped\robot_export\mujoco" name="right_ankle" joint="right_ankle" />
+  </actuator>
+  <sensor>
+    <!-- IMU at the "imu" site (Onshape frame imu) -->
+    <framequat     name="imu_quat"  objtype="site" objname="imu"/>
+    <gyro          name="imu_gyro"  site="imu"/>
+    <accelerometer name="imu_accel" site="imu"/>
+  </sensor>
+  <equality />
+  <keyframe>
+    <key name="home" qpos="0 0 0.2588 1 0 0 0  0 0 0 0 0  0 0 0 0 0" ctrl="0 0 0 0 0 0 0 0 0 0"/>
+  </keyframe>
+</mujoco>
